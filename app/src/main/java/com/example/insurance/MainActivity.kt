@@ -52,14 +52,14 @@ class MainActivity : AppCompatActivity() {
                 }
             }
 
-            val output_premium = NumberFormat.getCurrencyInstance().format(premium)
-            binding.textViewPremium.text = output_premium
+            val outputPremium = NumberFormat.getCurrencyInstance().format(premium)
+            binding.textViewPremium.text = outputPremium
 
         }
 
         binding.buttonReset.setOnClickListener{
             binding.radioGroupGender.clearCheck()
-            binding.checkBoxSmoker.toggle()
+            binding.checkBoxSmoker.isChecked = false
             binding.spinnerAge.setSelection(0)
             binding.textViewPremium.text = null
 
